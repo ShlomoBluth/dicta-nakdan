@@ -11,14 +11,16 @@ Cypress.Commands.add('nakdanRequest',({status=200,message='',delaySeconds=0})=>{
       statusCode: status
     }
     ).as('genreclassify')
-    cy.get('textarea[placeholder="הזן טקסט כאן"]').type('משה קיבל תורה')
+    cy.get('[placeholder="הזן טקסט כאן"]').type('משה קיבל תורה')
     if(message.length>0){
       cy.contains(message).should('not.exist')
     }
     cy.get('div[class="run-button"]').within(()=>{
         cy.get('button').click()
     })
-    cy.get('[class*="spinner"').should('exist')
+    if(delaySeconds>0){
+      cy.get('[class*="spinner"').should('exist')
+    }
     cy.wait('@api',{responseTimeout:1000*delaySeconds})
     if(message.length>0){
       cy.wait('@genreclassify',{responseTimeout:1000*delaySeconds}).then(xhr=>{
@@ -30,5 +32,6 @@ Cypress.Commands.add('nakdanRequest',({status=200,message='',delaySeconds=0})=>{
     }else{
       cy.get('@api').its('response.body').should('eq','it worked!')
     }
-    
-  })  
+  }) 
+  
+ 

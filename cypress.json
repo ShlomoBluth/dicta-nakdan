@@ -1,3 +1,5 @@
 {
-    "projectId": "bm2ffv"
+    "projectId": "bm2ffv",
+    "screenshotOnRunFailure": false,
+    "defaultCommandTimeout": 30000
 }

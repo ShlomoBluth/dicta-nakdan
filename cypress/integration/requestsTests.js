@@ -9,8 +9,11 @@ describe('requestsTests',()=>{
       cy.visit('https://nakdan.dicta.org.il/')
     })
 
-    it('Successful request after request with 60 seconds delay of response when clicking the run'+
-    ' butten of nakdan page '
+    
+
+
+    it('Successful request with 60 seconds delay of response when clicking the run butten of'+
+    ' nakdan page '
     ,()=>{
         cy.nakdanRequest({
           delaySeconds:60})
