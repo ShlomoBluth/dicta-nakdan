@@ -1,4 +1,4 @@
-Cypress.Commands.add('RequestTests',({status=200,message='',delaySeconds=0})=>{
+Cypress.Commands.add('nakdanRequest',({status=200,message='',delaySeconds=0})=>{
     cy.intercept( '/api', {
       delayMs:1000*delaySeconds,
       body:'it worked!',
