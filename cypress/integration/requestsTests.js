@@ -10,7 +10,7 @@ describe('requestsTests',()=>{
     })
 
 
-    it('Message after request failed with 2 minutes delay of response when clicking the ron butten'+
+    it('Message after request with 2 minutes delay of response failed when clicking the ron butten'+
     ' of nakdan page'
     ,()=>{
         cy.nakdanRequest({
@@ -20,7 +20,7 @@ describe('requestsTests',()=>{
     })
 
   
-   it('Message after request failed with status code 500 when clicking the ron butten of nakdan page'
+   it('Message after request with status code 500 failed when clicking the ron butten of nakdan page'
     ,()=>{
         cy.nakdanRequest({
           status:500,
