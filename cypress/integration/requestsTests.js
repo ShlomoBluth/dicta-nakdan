@@ -9,22 +9,13 @@ describe('requestsTests',()=>{
       cy.visit('https://nakdan.dicta.org.il/')
     })
 
-    
 
-
-    it('Successful request with 60 seconds delay of response when clicking the run butten of'+
-    ' nakdan page '
-    ,()=>{
-        cy.nakdanRequest({
-          delaySeconds:60})
-     })
-
-    it('Message after request failed with 61 seconds delay of response when clicking the ron butten'+
+    it('Message after request failed with 2 minutes delay of response when clicking the ron butten'+
     ' of nakdan page'
     ,()=>{
         cy.nakdanRequest({
           message:'לא ניתן לגשת כעת לשרת, נסה שוב מאוחר יותר',
-          delaySeconds:61
+          delaySeconds:60*2
         })
     })
 
