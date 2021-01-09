@@ -10,16 +10,16 @@ describe('requestsTests',()=>{
   })
 
 
-  it('Error message for response with a delay of 2 minutes when clicking the run butten'+
+  it('Error message for response with a delay of 2 minutes when clicking the run button'+
   ' of nakdan page',()=>{
     cy.nakdanRequest({
       message:'לא ניתן לגשת כעת לשרת, נסה שוב מאוחר יותר',
-      delaySeconds:60*2
+      delaySeconds:60+15
     })
   })
 
   
-  it('Error message for response with status code 500 when clicking the run butten of nakdan page'
+  it('Error message for response with status code 500 when clicking the run button of nakdan page'
   ,()=>{
     cy.nakdanRequest({
       status:500,
