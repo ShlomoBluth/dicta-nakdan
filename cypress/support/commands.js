@@ -13,9 +13,13 @@ Cypress.Commands.add('nakdanRequest',({status=200,message='',delaySeconds=0})=>{
   cy.get('div[class="run-button"]').within(()=>{
       cy.get('button').click()
   })
+
+  if(delaySeconds>0){
+    cy.get('[class*="spinner"]',{timeout:1000*delaySeconds}).should('not.exist')
+  }
   
   if(message.length>0){
-    cy.contains(message,{timeout:1000*delaySeconds+30000}).should('exist')
+    cy.contains(message).should('exist')
   }
 })   
   
