@@ -1,11 +1,11 @@
 
 
 
-Cypress.Commands.add('nakdanRequest',({status=200,message='',delaySeconds=0})=>{
-  cy.intercept( 'POST', '/api', {
+Cypress.Commands.add('nakdanRequest',({url,status=200,message='',delaySeconds=0})=>{
+  cy.intercept( 'POST', '/'+url, {
     delayMs:1000*delaySeconds,
     statusCode: status
-  }).as('api')
+  })
   cy.get('[placeholder="הזן טקסט כאן"]').type('משה קיבל תורה')
   if(message.length>0){
     cy.contains(message).should('not.exist')

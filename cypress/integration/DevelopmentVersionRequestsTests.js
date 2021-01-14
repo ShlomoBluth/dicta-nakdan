@@ -12,6 +12,7 @@ describe('DevelopmentVersionRequestsTests',()=>{
   it('Error message for response with a delay of 2 minutes when clicking the run button'+
   ' of development version nakdan page',()=>{
     cy.nakdanRequest({
+      url:'api',
       message:'לא ניתן לגשת כעת לשרת, נסה שוב מאוחר יותר',
       delaySeconds:60+15
     })
@@ -21,6 +22,7 @@ describe('DevelopmentVersionRequestsTests',()=>{
   it('Error message for response with status code 500 when clicking the run button of development'+
   ' version nakdan page',()=>{
     cy.nakdanRequest({
+      url:'api',
       status:500,
       message:'לא ניתן לגשת כעת לשרת, נסה שוב מאוחר יותר'
     })
