@@ -29,8 +29,8 @@ describe('requestsTests',()=>{
   })
 
   
-  it('Error message for response with status code 500 when clicking the run button of nakdan page'
-  ,()=>{
+  it('Error message for genreclassify response with status code 500 when clicking the run button'+
+  ' of nakdan page',()=>{
     cy.nakdanRequest({
       url:'genreclassify',
       status:500,
@@ -38,7 +38,7 @@ describe('requestsTests',()=>{
     })
   })
 
-  it('Error message for response with status code 500 when clicking the run button of nakdan page'
+  it('Error message for api response with status code 500 when clicking the run button of nakdan page'
   ,()=>{
     cy.nakdanRequest({
       url:'api',

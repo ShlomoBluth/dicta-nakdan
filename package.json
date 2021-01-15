@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:run": "npx run runChrome & npx run runFirefox",
-    "cy:runSpec": "npx run runChrome -- --spec %npm_config_spec% & npx run runFirefox -- --spec %npm_config_spec%",
+    "cy:run": "run runChrome & run runFirefox",
+    "cy:runSpec": "run runChrome -- --spec %npm_config_spec% & run runFirefox -- --spec %npm_config_spec%",
     "runChrome": "cypress run --browser chrome  --record --key 7abfbb2f-12de-4abd-ac31-b079f865c180",
     "runFirefox": "cypress run --browser firefox  --record --key 7abfbb2f-12de-4abd-ac31-b079f865c180"
   },

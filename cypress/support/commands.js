@@ -15,7 +15,7 @@ Cypress.Commands.add('nakdanRequest',({url,status=200,message='',delaySeconds=0}
   })
 
   if(delaySeconds>0){
-    cy.get('[class*="spinner"]',{timeout:1000*delaySeconds}).should('not.exist')
+    cy.get(/[class*="spinner"]|[class*="loader"]/g,{timeout:1000*delaySeconds}).should('not.exist')
   }
   
   if(message.length>0){
