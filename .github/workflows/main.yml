@@ -4,9 +4,9 @@
 name: Node.js Package
 
 on:
-  release:
-    types: [push]
-
+  push:
+    paths-ignore:
+    - '**DevelopmentVersionRequestsTests.js'
 jobs:
   cross-browser:
     runs-on: ubuntu-latest
