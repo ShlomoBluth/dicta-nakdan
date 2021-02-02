@@ -13,9 +13,8 @@ jobs:
     steps:
       - name: Checkout commit
         uses: actions/checkout@v1
-      - name: Firefox Browser tests
+      - name: Cypess run
         uses: cypress-io/github-action@v1
         with:
-          browser: firefox
-          start: npm start 
+          start: npm cy:run
       
