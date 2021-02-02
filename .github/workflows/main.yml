@@ -19,9 +19,5 @@ jobs:
           path: cypress\integration\basicTests.js
           browser: firefox
           start: npm start 
-      - name: Chrome browser tests
-        uses: cypress-io/github-action@v1
-        with:
-          browser: chrome
-          start: npm start     
+         
       
