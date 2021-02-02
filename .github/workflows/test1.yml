@@ -1,5 +1,8 @@
 name: example-basic
-on: [push]
+on:
+  push:
+    paths:
+    - '**basicTests.js'
 jobs:
   basic-ubuntu-16:
     runs-on: ubuntu-16.04
