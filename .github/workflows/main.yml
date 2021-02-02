@@ -17,6 +17,10 @@ jobs:
         uses: cypress-io/github-action@v1
         with:
           browser: firefox
+      - name: Chrome browser tests
+        uses: cypress-io/github-action@v1
+        with:
+          browser: chrome
           
          
       
