@@ -3,10 +3,8 @@
 
 name: Basic Tests
 
-on:
-  push:
-    paths-ignore:
-    - '**DevelopmentVersionRequestsTests.js'
+on: [push]
+
 jobs:
   cross-browser:
     runs-on: ubuntu-latest
@@ -16,7 +14,8 @@ jobs:
       - name: Firefox browser tests
         uses: cypress-io/github-action@v1
         with:
-          run: npm run runFirefox -- --spec C:\Users\Administrator\Desktop\Cypress\dicta-nakdan\cypress\integration\basicTests.js
+          browser: firefox
+          path: basicTests.js
       - name: Chrome browser tests
         uses: cypress-io/github-action@v1
         with:
