@@ -16,8 +16,7 @@ jobs:
       - name: Firefox browser tests
         uses: cypress-io/github-action@v1
         with:
-          working-file: cypress\integration\basicTests.js
           browser: firefox
-          start: npx cypress run --browser chrome
+          
          
       
