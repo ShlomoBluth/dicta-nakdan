@@ -16,6 +16,6 @@ jobs:
       - name: Firefox browser tests
         uses: cypress-io/github-action@v1
         with:
-          browser: Firefox
-          start: npm run 
+          browser: firefox
+          start: npm start 
       
