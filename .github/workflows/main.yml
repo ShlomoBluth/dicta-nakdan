@@ -16,5 +16,5 @@ jobs:
       - name: Cypess run
         uses: cypress-io/github-action@v1
         with:
-          start: npm cy:run
+          start: npm run cy:run 
       
