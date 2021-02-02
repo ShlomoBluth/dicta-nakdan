@@ -8,7 +8,7 @@ on:
     types: [push]
 
 jobs:
-  build:
+  cross-browser:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout commit
