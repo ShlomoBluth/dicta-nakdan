@@ -14,8 +14,8 @@ jobs:
       - name: Firefox browser tests
         uses: cypress-io/github-action@v1
         with:
+          path: cypress\integration\basicTests.js
           browser: firefox
-          path: basicTests.js
       - name: Chrome browser tests
         uses: cypress-io/github-action@v1
         with:
