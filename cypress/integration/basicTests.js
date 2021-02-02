@@ -6,7 +6,11 @@ describe('basicTests',()=>{
 
     beforeEach(() => {
         cy.visit('https://nakdan.dicta.org.il/')
-      })
+    })
+
+    afterEach(()=>{
+        cy.on('window:confirm', () => true);
+    })
     
     it('Modern nakdan',()=>{
         cy.get('input[id="use-modern-nakdan"]').click({force: true})
