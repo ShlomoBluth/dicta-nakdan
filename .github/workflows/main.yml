@@ -12,7 +12,7 @@ jobs:
       - name: Checkout commit
         uses: actions/checkout@v1
       - name: Chrome browser tests
-        run: npm run runChrome
+        run: npx cypress run --browser chrome --spec ./cypress/integration/basicTests.js
       - name: Firefox browser tests
         uses: cypress-io/github-action@v1
         with:
