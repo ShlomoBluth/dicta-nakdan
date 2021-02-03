@@ -11,15 +11,15 @@ jobs:
     steps:
       - name: Checkout commit
         uses: actions/checkout@v1
+      - name: Chrome browser tests
+        uses: cypress-io/github-action@v1
+        with:
+          browser: chrome
       - name: Firefox browser tests
         uses: cypress-io/github-action@v1
         with:
           start-windows: npm run start:ci:windows
           browser: firefox
-      - name: Chrome browser tests
-        uses: cypress-io/github-action@v1
-        with:
-          browser: chrome
           
          
       
