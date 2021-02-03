@@ -12,12 +12,12 @@ jobs:
   cross-browser:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout commit
-        uses: actions/checkout@v1
+      
+
       - name: Chrome browser tests
         run: npx cypress run --browser chrome --spec ./cypress/integration/basicTests.js
-        uses: cypress-io/github-action@v1
+    
       - name: Firefox browser tests
         run: npx cypress run --browser firefox --spec ./cypress/integration/basicTests.js
-        uses: cypress-io/github-action@v1
+        
       
