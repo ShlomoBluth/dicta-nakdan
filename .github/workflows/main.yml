@@ -13,8 +13,8 @@ jobs:
         uses: actions/checkout@v1
       - name: Firefox browser tests
         uses: cypress-io/github-action@v1
-        working-directory: ./cypress/integration
         with:
+          working-directory: ./cypress/integration
           start-windows: npm run start:ci:windows
           browser: firefox
       - name: Chrome browser tests
