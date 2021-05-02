@@ -26,9 +26,7 @@ sizes.forEach((size) => {
             cy.visit('/')
         })
     
-        afterEach(()=>{
-            cy.on('window:confirm', () => true);
-        })
+        
         
         it('Modern nakdan',()=>{
             cy.selectStyle('modern')
