@@ -44,8 +44,10 @@ sizes.forEach((size) => {
     
         it('Poetry nakdan',()=>{
             cy.selectStyle('poetry').then(()=>{
-                cy.runNakdan('משה קיבל תורה מסיני')
-                cy.resultsTests('משֶׁה קִבֵּל תּוֹרָה מִסִּינַי')
+                cy.wait(3000).then(()=>{
+                    cy.runNakdan('משה קיבל תורה מסיני')
+                    cy.resultsTests('משֶׁה קִבֵּל תּוֹרָה מִסִּינַי')
+                })
             })
         })
     })
