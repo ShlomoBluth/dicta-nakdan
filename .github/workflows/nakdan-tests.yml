@@ -1,7 +1,4 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
-
-name: Basic Tests
+name: nakdan tests
 
 on: 
   push
@@ -33,21 +30,21 @@ jobs:
 
     - name: Run chrome tests
       run: npx cypress run --browser chrome --spec ./cypress/integration/basicTests.js
-      
-    #- name: Run chrome requests tests
-      #run: xvfb-run npx cypress run --browser chrome --spec ./cypress/integration/requestsTests.js
-      #if: ${{ always() }}
-      
 
     - name: Run firefox tests
       run: xvfb-run npx cypress run --browser firefox --spec ./cypress/integration/basicTests.js
       if: ${{ always() }}
-  
-    #- name: Run firefox requests tests
-      #run: xvfb-run npx cypress run --browser firefox --spec ./cypress/integration/requestsTests.js
+
+    #- name: Run chrome requests tests
+      #run: npx cypress run --browser chrome --spec ./cypress/integration/requestsTests.js
       #if: ${{ always() }}
 
-    - name: Copy test execution videos 
+    #- name: Run firefox requests tests
+      #run: npx cypress run --browser firefox --spec ./cypress/integration/requestsTests.js
+      #if: ${{ always() }}
+
+
+    - name: Copy test execution videos
       run: |
         mkdir public
         cp -r cypress/videos public/videos
@@ -67,4 +64,3 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
       if: ${{ always() }}
-                
