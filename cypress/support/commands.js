@@ -2,7 +2,7 @@
 Cypress.Commands.add('runNakdan',(text)=>{
   cy.get('[placeholder="הזן טקסט כאן"]').type(text)
   cy.get('div[class="run-button"]').within(()=>{
-    cy.get('button').click()
+    cy.get('button').click({force: true})
   })
 })
 
