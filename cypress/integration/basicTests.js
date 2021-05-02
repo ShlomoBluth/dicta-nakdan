@@ -29,21 +29,24 @@ sizes.forEach((size) => {
         
         
         it('Modern nakdan',()=>{
-            cy.selectStyle('modern')
-            cy.runNakdan('משה קיבל תורה מסיני')
-            cy.resultsTests('מֹשֶׁה קִבֵּל תּוֹרָה מִסִּינַי')
+            cy.selectStyle('modern').then(()=>{
+                cy.runNakdan('משה קיבל תורה מסיני')
+                cy.resultsTests('מֹשֶׁה קִבֵּל תּוֹרָה מִסִּינַי')
+            })
         })
     
         it('Rabbinic nakdan',()=>{
-            cy.selectStyle('rabbinic')
-            cy.runNakdan('משה קיבל תורה מסיני')
-            cy.resultsTests('מֹשֶׁה קִבֵּל תּוֹרָה מִסִּינַי')
+            cy.selectStyle('rabbinic').then(()=>{
+                cy.runNakdan('משה קיבל תורה מסיני')
+                cy.resultsTests('מֹשֶׁה קִבֵּל תּוֹרָה מִסִּינַי')
+            })
         })
     
         it('Poetry nakdan',()=>{
-            cy.selectStyle('poetry')
-            cy.runNakdan('משה קיבל תורה מסיני')
-            cy.resultsTests('משֶׁה קִבֵּל תּוֹרָה מִסִּינַי')
+            cy.selectStyle('poetry').then(()=>{
+                cy.runNakdan('משה קיבל תורה מסיני')
+                cy.resultsTests('משֶׁה קִבֵּל תּוֹרָה מִסִּינַי')
+            })
         })
     })
 })
