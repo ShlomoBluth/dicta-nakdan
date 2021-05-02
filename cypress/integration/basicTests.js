@@ -42,14 +42,12 @@ sizes.forEach((size) => {
             })
         })
     
-        it('Poetry nakdan',()=>{
-            cy.selectStyle('poetry').then(()=>{
-                cy.wait(30000).then(()=>{
-                    cy.runNakdan('משה קיבל תורה מסיני')
-                    cy.resultsTests('משֶׁה קִבֵּל תּוֹרָה מִסִּינַי')
-                })
-            })
-        })
+        // it('Poetry nakdan',()=>{
+        //     cy.selectStyle('poetry').then(()=>{
+        //         cy.runNakdan('משה קיבל תורה מסיני')
+        //         cy.resultsTests('משֶׁה קִבֵּל תּוֹרָה מִסִּינַי')
+        //     })
+        // })
     })
 })
 
