@@ -55,9 +55,11 @@ Cypress.Commands.add('selectStyle',(style)=>{
   if(Cypress.config("viewportWidth")!==1000){
     cy.get('a').contains('סגנון').click({force:true})
     cy.get('input[id="use-'+style+'-nakdan"]').click({force: true})
+    cy.get('input[id="use-'+style+'-nakdan"]').should('be.checked')
     cy.get('button').contains('שמור שינויים').click({force: true})
   }else{
     cy.get('input[id="use-'+style+'-nakdan"]').click({force: true})
+    cy.get('input[id="use-'+style+'-nakdan"]').should('be.checked')
   }
 })
   
