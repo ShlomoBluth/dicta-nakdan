@@ -30,7 +30,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
 });
 
-cy.on('window:confirm', () => true);
+Cypress.on('window:confirm', () => true);
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
