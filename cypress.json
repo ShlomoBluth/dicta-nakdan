@@ -9,7 +9,7 @@
     },
     "env":{
         "TOOL_TESTS":true,
-        "REQUESTS_TESTS":true,
+        "REQUESTS_TESTS":false,
         "RECORD_KEY":"7abfbb2f-12de-4abd-ac31-b079f865c180"
     }
 }
