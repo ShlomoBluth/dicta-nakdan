@@ -54,7 +54,7 @@ jobs:
             cat toolTest.log; exit 1
           fi
         fi 
-      if: failure()
+      if: success()
 
     - name: Copy test execution videos 
       run: |
