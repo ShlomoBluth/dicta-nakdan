@@ -60,6 +60,7 @@ jobs:
     - name: Copy test execution videos 
       run: |
         cp cypress/videos/* public/videos
+        true
       if: ${{ always() && (env.TOOL_TESTS == 'true')}}
 
     - name: Run chrome requests tests

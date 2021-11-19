@@ -24,7 +24,6 @@ urls.forEach((urlValue,urlKey)=>{
             })
 
             it('Modern nakdan',()=>{
-                expect(5).eq(8)
                 cy.selectStyle('modern').then(()=>{
                     cy.runNakdan('משה קיבל תורה מסיני')
                     cy.resultsTests('מֹשֶׁה קִבֵּל תּוֹרָה מִסִּינַי')
