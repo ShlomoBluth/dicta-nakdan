@@ -95,9 +95,10 @@ jobs:
       if: ${{ always() && ((env.REQUESTS_TESTS == 'true') || (env.TOOL_TESTS == 'true')) }}
 
     - name: Deploy report page
-      uses: peaceiris/actions-gh-pages@v3 || true
+      uses: peaceiris/actions-gh-pages@v3 
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
+      run: echo 'true'
       if: ${{ always() && ((env.REQUESTS_TESTS == 'true') || (env.TOOL_TESTS == 'true')) }}
                 
