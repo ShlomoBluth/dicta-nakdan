@@ -54,7 +54,7 @@ jobs:
             cat toolTest.log; exit 1
           fi
         fi 
-      if: ${{env.TOOL_TESTS == 'true' || failure()}}
+      if: failure()
 
     - name: Copy test execution videos 
       run: |
