@@ -88,11 +88,11 @@ jobs:
       if: ${{ always() && (env.REQUESTS_TESTS == 'true') }}
 
     - name: Merge test results into one
-      run: npx mochawesome-merge cypress/results/json/*.json > index.json
+      run: npx mochawesome-merge cypress/results/json/*.json > index.json || true
       if: ${{ always() && ((env.REQUESTS_TESTS == 'true') || (env.TOOL_TESTS == 'true')) }}
 
     - name: Generate HTML report
-      run: npx marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html
+      run: npx marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html || true
       if: ${{ always() && ((env.REQUESTS_TESTS == 'true') || (env.TOOL_TESTS == 'true')) }}
 
     - name: Deploy report page
