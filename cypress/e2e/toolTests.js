@@ -25,15 +25,15 @@ urls.forEach((urlValue,urlKey)=>{
 
             it('Modern nakdan',()=>{
                 cy.selectStyle('modern').then(()=>{
-                    cy.runNakdan('משה קיבל תורה מסיני')
-                    cy.resultsTests('מֹשֶׁה קִבֵּל תּוֹרָה מִסִּינַי')
+                    cy.runNakdan('משֶׁה קִבֵּל תּוֹרָה מִסִּינַי')
+                    cy.resultsTests('משֶׁה קִבֵּל תּוֹרָה מִסִּינַי')
                 })
             })
         
             it('Rabbinic nakdan',()=>{
                 cy.selectStyle('rabbinic').then(()=>{
-                    cy.runNakdan('משה קיבל תורה מסיני')
-                    cy.resultsTests('מֹשֶׁה קִבֵּל תּוֹרָה מִסִּינַי')
+                    cy.runNakdan('משֶׁה קִבֵּל תּוֹרָה מִסִּינַי')
+                    cy.resultsTests('משֶׁה קִבֵּל תּוֹרָה מִסִּינַי')
                 })
             })
         
