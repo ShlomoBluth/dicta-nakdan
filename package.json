@@ -13,6 +13,7 @@
     "mocha": "^8.3.2",
     "mochawesome": "^6.2.2",
     "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^6.2.0",
     "npx-run": "^2.1.2"
   }
 }

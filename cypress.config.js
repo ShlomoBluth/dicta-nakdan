@@ -12,7 +12,7 @@ module.exports = defineConfig({
   },
   env: {
     DEV_URL: 'https://sharing-nakdan-simple.netlify.app/',
-    LIVE_URL: 'https://nakdan.dicta.org.il/',
+    LIVE_URL: 'https://nakdansimple.dicta.org.il/',
     TOOL_TESTS: true,
     REQUESTS_TESTS: false,
     RECORD_KEY: '7abfbb2f-12de-4abd-ac31-b079f865c180',
