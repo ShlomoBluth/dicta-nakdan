@@ -1,10 +1,10 @@
 name: Firefox tests
 
 on:
-  # push
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '0 2,10,18 * * *'
+  push
+  # schedule:
+  #   # * is a special character in YAML so you have to quote this string
+  #   - cron:  '0 2,10,18 * * *'
 
 
 jobs:
@@ -32,6 +32,7 @@ jobs:
         npm install --save-dev cypress@12.1.0
         npm install cypress-multi-reporters --save-dev
         npm install mochawesome --save-dev
+        npm install --save-dev mochawesome-report-generator
         $(npm bin)/cypress cache path
         $(npm bin)/cypress cache list
         $(npm bin)/cypress verify
@@ -100,7 +101,7 @@ jobs:
       if: ${{ always() && ((env.REQUESTS_TESTS == 'true') || (env.TOOL_TESTS == 'true')) }}
 
     - name: Generate HTML report
-      run: npx marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html
+      run: npx mochawesome-report-generator index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html
       if: ${{ always() && ((env.REQUESTS_TESTS == 'true') || (env.TOOL_TESTS == 'true')) }}
 
     - name: Deploy report page
