@@ -33,7 +33,7 @@ Cypress.Commands.add('resultsTests',(text)=>{
 
 Cypress.Commands.add('nakdanRequest',({url,status=200,message='',delaySeconds=0})=>{
   cy.intercept( 'POST', '/'+url, {
-    delayMs:1000*delaySeconds,
+    delay:1000*delaySeconds,
     statusCode: status
   })
   if(message.length>0){
